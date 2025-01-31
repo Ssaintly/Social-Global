@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Color Variables ===== */
+:root {
+  --white: #ffffff;
+  --black: #2D3748;
+  --purple-light: #9F7AEA;
+  --purple-dark: #6B46C1;
+  --blue-light: #4299E1;
+  --blue-dark: #3182CE;
+}
+
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--purple-light), var(--blue-light));
+  min-height: 100vh;
+  color: var(--black);
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ===== Cards (Login/Profile/Friends) ===== */
+.card {
+  background: var(--white);
+  border-radius: 20px; /* Soft rounded corners */
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Input Fields ===== */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 12px; /* 50% would make it oval; adjust as needed */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--purple-dark);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.2);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  background: var(--purple-dark);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 9999px; /* Pill-shaped (50% rounded) */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+/* ===== Friend List / User Search ===== */
+.list-item {
+  background: var(--white);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.list-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Icons ===== */
+.icon {
+  color: var(--purple-dark);
+  margin-right: 0.5rem;
+}
+
+/* ===== Links ===== */
+.link {
+  color: var(--purple-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: var(--blue-dark);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    border-radius: 15px;
+    padding: 1.5rem;
+  }
+}
